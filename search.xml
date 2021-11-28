@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>GFW的技术迭代历史梳理</title>
+      <link href="/posts/1.html"/>
+      <url>/posts/1.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2012/03/03/23/06/wall-21534_960_720.jpg"></p><h3 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h3><p>​       这些知识是我自己因为工作需要google搜资料，所以看了一些别人的文档和视频，之后记录在我的onenote上，所以特地发上来！ <strong>注意： 本文只是探讨GFW技术的迭代和发展，无关其他！ 望知悉！</strong> </p><h3 id="概况："><a href="#概况：" class="headerlink" title="概况："></a>概况：</h3><p>​        中国KXSW时代大致分为三个时代，按照阶段可以分为：<strong>古代</strong>：1998-2011；<strong>近代</strong>：2012-2016；<strong>现代</strong>：2017- 至今，由2012年标志性的软件<strong>shadowsocks</strong>诞生为分界线，2017年则是trojan诞生！</p><h3 id="古代："><a href="#古代：" class="headerlink" title="古代："></a>古代：</h3><p>​       中国互联网1987年开始，还是比较早，那封越过长城的邮件很火，<strong>GFW</strong>的诞生晚的多，起步于1998年，当时的主要手段是<strong>Dns劫持</strong>或者<strong>IP的封锁</strong>，以及<strong>包过滤</strong>：就是对一些明文协议进行关键字过滤，后来才出现的这是。 这类级别的封锁应付起来，还是比较简单的，比如应对域名劫持，我们可以把DNS服务器设置成国外，谷歌的dns是8.8.8.8，那个时候GFW还不会<strong>Dns污染</strong>，所以设置成国外dns是有效的，有人还总结了被阻挡的域名所对应的IP，也叫做<strong>hosts文件</strong>，我们可以修改自己电脑的hosts文件，当你的电脑进行DNS解析时，就不用通过网上的DNS服务器进行查询，而是直接从hosts文件中读取相应IP,当然，这种雕虫小技是不会长久的。<br>​       后来GFW学会了<strong>包检测</strong>的技术，当时用的都是<strong>http明文协议</strong>，只要简单分析协议头，就能知道你想访问哪里，对于这种封锁，就没办法用雕虫小技来KXSW了，这个时候要KXSW，就要用到代理服务器，，当时主要是的协议是http或者socks代理，当时网上随便一搜，就有很多代理服务器，不知道为啥那时候有那么多活雷锋，需要说明，无论http代理或者socks代理，这些协议都不是专门为KXSW设计的协议，这些协议都有对应的RFC标准，当时设定的目的也是为了管理的方便和安全考虑，并没有规避审查的考虑，由于是RFC标准，大部分软件都支持这些代理协议，所以只要我们再软件中设置下代理服务器，就能KXSW了！</p><p>​       代理服务器这个思想我们要记住，如果不能直接访问一个网站，通过一台中间的机器作为跳板，由它访问这个问题，再把访问的结果传输给你，这个基本思路就是以后我们所有KXSW软件的基本思路，无非就是在这个过程中加入了加密i或者混淆伪装，使GFW不能正常的识别罢了，以上说的都是GFW的远古时代。</p><p><strong>总结 ：</strong></p><p>​       我们远古时代的大部分时间KXSW主要用的就是VPN，同样VPN这个东西也不是专门为KXSW设计的协议，主要用途是跨国公司传输商业数据内部网络所用，但是好歹，VPN是加密的，GFW并不能识别里面的内容，也不能一刀切全封掉，所以VPN在很长一段时间内是可以正常使用的，以至于现在小白 只要遇到KXSW软件，就说是VPN,  应该说，vpn虽然不是为KXSW设计的，但由于它是运行在网络模型比较底层的位置，所以VPN被认为是一种全局代理，由于它的结构非常简单，不涉及各种规则和分流的问题，对于小白可能更友好，这是它流行的原因之一，古代内容就讲完了</p><h3 id="近代："><a href="#近代：" class="headerlink" title="近代："></a>近代：</h3><p>​       从2012.4开始，<strong>shadowsocks</strong>，专门为KXSW所写，软件和协议都是同一个名字，第一款广为人知的KXSW协议，是无可争议的，即使现在，shadows和变种ssr协议，shadowsocks第一次把代理服务器分为客户端和服务端，客户端提供的是标准的<strong>SOCKS5协议</strong>，任何 支持代理设置的软件都可以把代理服务器设置成shadowsocks5的客户端，客户端收到请求，会通过加密的方式转给ss的服务器端，客户端和服务器端加密通信用的是 预共享密钥的形式，所以流量特征非常弱，很长时间内GFW都没有办法识别和拦截，即使过去很久，现在很多软件都没有逃离它所定义的这个标准，所以你要说它用的技术都是现有的技术，但是这个想法是非常重要的，ss开创了专用KXSW协议的时代，很多KXSW软件都是对ss的改进和优化，并没有实质性的变革。</p><p>​       路由器硬件KXSW是路由器的杀手应用，路由器起到透明网关的作用，所有设备都不用安装任何软件，即可上网，简直是一机KXSW，全家光荣！</p><p>路由器跑的翻KXSW服务两种：</p><ul><li>.通过ssh进行转发，这种特征比较明显，不是特别好用 。</li><li>在路由器上跑shadowsocks通过C语言实现的版本，叫做<strong>shadowsocks libev版本</strong>，占用资源更少，非常适合在路由器低性能设备上用!  。     </li></ul><p><strong>总结：</strong></p><p> KXSW在近代的特点：</p><ul><li>.专门为KXSW设置的协议</li><li>流量特征少，加密强为主</li><li>开源和互联网协作</li></ul><h3 id="现代："><a href="#现代：" class="headerlink" title="现代："></a>现代：</h3><p>​      2017诞生的<strong>Trojan</strong>，意义非常重大，把KXSW直接推进到现代, 它的特别之处在于, 在trojan之前，KXSW主要有两个特征：1. 消除特征 ； 2. 混淆（对加密流量进行混淆，让GFW认为这是正常的流量），但是都出现过安全漏洞，容易被GFW安全识别，面对这些漏洞，以前的主要方法就是打补丁，这样就容易进入，发现漏洞，补漏洞，再发现漏洞，再补漏洞的循环，即使没有漏洞，一个没有明显特征，但是有大流量的请求，本身也是一种特征，这时候trojan就出现了，用https协议进行，并且用TLS加密传输，规避了各种协议和漏洞，这样看起来和一个正常的网站没有区别！</p><p>​       KXSW进入到现代，另一个特点就是软路由的大量运用，普通路由器性能低，无法承受，路由器性能就成了瓶颈！但是软路由低功耗主机已经降到了可以接受的价格，<strong>openwrt</strong>系统已经非常成熟，突然之间，软路由成了标配，软路由的cpu比硬路由是强太多了，即使是低端的cpu的也比硬路由的快很多，一时间跑满千兆KXSW成了大家的追求！</p><p><strong>总结：</strong></p><p>现代KXSW史有两个特点：</p><ul><li>基本放弃了发明新的协议（加密算法），伪装成<strong>https</strong>的网站成了主流，大家注意这种伪装和以前的流量混淆是有区别的！</li><li>.另外一个特点，就是软路由的大量使用，打破了各种限制，也开发了各种可能性！</li></ul><h3 id="未来"><a href="#未来" class="headerlink" title="未来-"></a>未来-</h3><ul><li>大数据和人工智能（GFW现在肯定运用大数据和AI的技术在流量识别上面），但我认为目前还没有到成熟阶段，不过值得继续关注，也许有一天准确率会打到难以置信的高度，其次，随着技术的进步！</li><li>一个高效匿名的完全去中心化的网络可能会出现，注意是三条同时满足，tor网络可能满足后两条，但是不满足第一条</li><li>白名单，没法确定，这种不能确定的问题不能算是一个真的问题！</li></ul><h2 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h2><p>​                                                                         </p><p>​    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于线路科普和协议算法的发展</title>
+      <link href="/posts/5ecf2a65.html"/>
+      <url>/posts/5ecf2a65.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="开篇："><a href="#开篇：" class="headerlink" title="开篇："></a>开篇：</h2><p>​     这个文章也是看了很多视频，尤其是AK的视频，记录了笔记，感觉他讲的挺专业的，也挺通俗易懂，所以就大致的知识点记录了下来，放到这上面也算是小复习了！ <strong>注意： 本文只是探讨GFW的技术迭代以及各大运营商的线路知识科普和协议算法的发展，技术无罪！ 有其他需求请绕道！！谢谢！</strong>   </p><h2 id="KXSW的方式："><a href="#KXSW的方式：" class="headerlink" title="KXSW的方式："></a>KXSW的方式：</h2><p>​        三种模式：</p><ul><li><p>软件：各类代理软件</p></li><li><p>硬件：硬路由软路由 （其实这两类也可以分开）</p></li><li><p>网关模式（比如就是CLASH里的Allow Lan（允许局域网连接））！</p></li><li><p>或者可以另外说：1.客户端；路由器；软路由！</p></li></ul><h2 id="线路的讲解："><a href="#线路的讲解：" class="headerlink" title="线路的讲解："></a>线路的讲解：</h2><ul><li><strong>CN2</strong> (CHINA TELECOM NETX CARRIER NETWORK的缩写）：中国电信下一代承载网络，比<strong>163骨干网</strong>更通畅，搭载了<strong>QOS</strong>（Quaity of Service:服务质量，可以动态调节网络服务内容，保证网络的通畅性，有一种说法是被<strong>QOS</strong>,就是被<strong>QOS</strong>调整到低优先级，限了速）技术，主面向政企大客户，保证高质量的国际访问 !  <strong>CN2</strong>优点：<strong>QOS</strong>服务 ,缺点：价格非常高，包括（CN2GT （Global transit） CN2GIA（Global internet Access）! CN2GT更便宜些，拥堵程度一般，CN2GIA最贵最好，最稳定！ <strong>注意的点：</strong>有的小伙伴用了<strong>CN2</strong>，还是很慢，一个原因是被<strong>QOS</strong>，另一个就是你出口流量走的是<strong>CN2</strong>，回来流量可能走的还是<strong>163骨干网</strong>，所以买<strong>CN2</strong>线路时候，一定要搞清楚买的是<strong>单向CN2</strong>还是<strong>双向CN2</strong>, 有很多无良的服务提供商（<strong>ISP</strong>）！<strong>干货</strong>：很多游戏加速器其实用得就是有<strong>QOS</strong>的<strong>CN2</strong>线路，但具体走的是<strong>GIA</strong>还是<strong>GT</strong>，一般加速器厂商都不会直接告诉你，但是试用体验最好的加速器，一般都是比<strong>CN2</strong>优先级更高的线路！</li><li><strong>BGP:</strong> （<strong>Border Gateway Protocol</strong>的缩写：<strong>边界网关协议</strong>)，<strong>BGP</strong>机房一般叫<strong>多线机房</strong>，<strong>BGP</strong>机房可以自动识别你的线路是电信，联通还是移动，并且会自动使用最适合你连接服务器的线路，再你网络不通的时候，还会自动切换到其他线路来连接服务器，有些垃圾卖家为了节省成本，有一些冒牌的<strong>BGP</strong>机房，虽然也是多线接入，但是再线路故障的时候不会自动切换线路，需要人工介入！请注意！</li><li><strong>GCP:</strong> （谷歌云的缩写）</li><li><strong>AWS:</strong> （亚马逊的，<strong>AMAZON WEB SERVICE</strong>）</li><li><strong>AZURE:</strong> (微软家的服务)，这三个不是推荐给大部分人，各有各的问题和特点，比如<strong>google</strong>贵，<strong>Azure</strong>申请麻烦，亚马逊流量比较少，这三家不是针对国内市场做业务，针对的是全球，但敏感时期会抽风，不太稳定，<strong>优点就是带宽大，可以换IP</strong>，如果你是发烧友可以去实验）</li><li><strong>PCCW:</strong> 香港电讯盈科提供的，到大陆走的线路是<strong>PCCW</strong>自己接的直连，香港位置很好，很多<strong>ISP</strong>(网络服务提供商简称)会在香港这个位置租售主机，线路挺多，其中还有<strong>HKT</strong>, <strong>HKBN</strong>等，目前看<strong>PCCW</strong>是最好的，所以尽可能选择<strong>PCCW</strong>！</li><li><strong>IPLC:</strong> ( <strong>International Private Leased Circuit</strong> (国际私有租用线路，就是传说中的专线)，有两个非常牛逼的特点：<strong>1.**价格奇贵，几千上万一个月，即使在供应商买了和别人合用，也是比别的线路贵很几倍以上，而且往往带宽小，流量低，这一点一定注意，很多标榜自己是IPLC线路的这些人，把很多东西做了隐性处理，他不明说，比如说带宽低，流量小，或者流量倍率高，大家在看到</strong>IPLC<strong>的时候一定稳住，里面水很深！ **2.</strong> <strong>IPLC</strong>不过<strong>GFW</strong>审查，<strong>IPLC</strong>不过GFW，没有GFW不需要KXSW，之前说的游戏加速器线路，<strong>IPLC</strong>线路的游戏加速器效果是最好的，也是最贵的，有需求的朋友买加速器记得明确是不是IPLC线路了！<strong>补充：</strong>这期说的线路情况都是普遍情况，线路是很复杂的概念，搞明白线路大概问题后，一定要实测，以实测为准！</li><li> 关于主机和线路的供应商，如果你不是特别专业，不要随便做推荐，最好的方式是自己通过学习相关的技术知识，自己去做判断和实验，然后挑选出适合自己的主机和线路，千万别像youtube一些无良博主的推荐，推荐的人多了，节点也就挂了，拥堵了，最好的方法就是学明白，自己来，自己测！还有就是自己搭建<strong>VPS</strong>不推荐，因木桶效应，考虑的问题太多，体验不好，买节点或者加速器最好！</li></ul><h2 id="关于协议的选择和其他"><a href="#关于协议的选择和其他" class="headerlink" title="关于协议的选择和其他.."></a>关于协议的选择和其他..</h2><p>VPS个人搭建的成本后续只会越来越高，还无人维护，不推荐！</p><p><strong>用VPS的人：</strong></p><ul><li>.写代码的，搞网络的，经常调试程序的，建站的，这些人可能涉及境外服务，自己搭建VPS来玩玩，顺便KXSW，出现问题有能力解决！</li><li>本职工作不是技术类，一帮发烧友！</li><li>他们自建VPS是为了搭建机场，卖给别人，有技术能力的，慢慢扩大，没有技术维护的，就关闭了，这里面有能力的是极少的，万中无一，什么阿猫阿狗都有，甚至还有现学现卖的</li><li>搭建只是为了KXSW，按教程一步一步做，也不懂相关技术知识，这部分人才是绝大部分人</li><li>如果要稳定，那么VPS的稳定性基本不存在，就算存在也只是暂时的！你要面临：<strong>1.**接入线路的优化问题 ，</strong>2.** <strong>QOS</strong>问题，<strong>3.</strong> <strong>IP</strong>被封锁问题, <strong>4.</strong> 敏感时期不能开机的问题, <strong>5.</strong> 协议和算法的加密和选择的问题, <strong>6.</strong> 流媒体的解锁，VPS的IP限制导致你只有唯一的一个地理位置可以用，想看多地区的节目，你需要多个地区的<strong>VPS</strong>,机场的话就随便选择，有几十个节点, <strong>7.</strong> 使用方面的便捷度，VPS如果倒了就懵圈了，机场节点死一半都没问题 ! 简而言之 , <strong>VPS</strong> 一旦出现问题，所有的环节需要你一个人搞定，机场可以理解为有几十上百个公共VPS同时授权你用，其中一个出现问题，你可以选择其他的，出现问题的线路也会有专人来处理 !</li></ul><p><strong>选择机场注意的点：</strong>测试的时候选在周末高峰期最具代表性，检测这家机场的实力！推荐<strong>毒药</strong>网站，测速的网站! <strong>大机场永远是最稳定的</strong> !</p><p><strong>协议的选择：</strong> 所有协议都只有相对安全，没有绝对安全！在所有协议中，<strong>shadowsocks</strong> 协议，因为机制问题，目前还是体验最好，最简单，最快速，极度体现暴力美学的中转代理方式！同时，没有任何人能准确的告诉你shadowsocks协议已经被精确识别，判断并被封锁！这种风险存在，但原因是多维度的，<strong>ss</strong> 的安全性存在一定风险，但是目前依然是KXSW的主流方式！人工面临大数据是很无力的！ <strong>trojan</strong> 相比<strong>V2RAY</strong>，<strong>特点1：</strong> 协议变的更简单，只有一种websocket+tls，<strong>另一个特点:</strong> 就是执行加密解密算法比v2ray更快，是简化版的V2ray, 的确差不多是这样子！缺点就是定死了一个协议，其他协议就不支持了，弹性比较差， <strong>还有一个特点：</strong> trojan比较新，有些设备根本不能有相应的成熟的客户端能够使用！ </p><p><strong>小结：</strong> </p><ul><li>如果自建<strong>VPS</strong>，建议使用<strong>V2RAY协议</strong>，比<strong>ss</strong>更安全些！如果你对速度有更高点的要求，选择<strong>trojan</strong>就好，<strong>trojan</strong>虽然和<strong>V2RAY</strong>差不多，算是简化版本，但是速度比<strong>V2RAY</strong>更快!</li><li>如果是买的机场，就用<strong>shadowsocks</strong>协议，<strong>ss协议</strong>是没问题的，除非机场要故意赔钱，协议的选择是根据你的需求，部署环境，和使用习惯等因素挂钩的，因此没有最好的协议，学习网络知识的基础，掌握了相关技能后，动态的取舍才是最佳的KXSW方式!</li></ul><h2 id="非主流的KXSW"><a href="#非主流的KXSW" class="headerlink" title="非主流的KXSW"></a>非主流的KXSW</h2><h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN:"></a>VPN:</h3><p>中国大部分用户可能还是用的<strong>VPN</strong>KXSW，可能得超过有50%，很吃惊…….<strong>VPN</strong>是广义的，很多游戏加速器可能就是用的<strong>ss协议</strong>，甚至一些<strong>VPN</strong>客户端也是可能用的<strong>ss协议</strong>，节点之类的，可以理解成<strong>封闭的ss</strong>，这些软件底层都不是<strong>VPN</strong>的通讯协议！这些用户的KXSW特点：1.看成人内容或者敏感内容，KXSW之后获取信息的方向非常窄!</p><p>目前主流的KXSW还是采用<strong>socks5</strong>代理的<strong>ss</strong>或者<strong>ssr</strong>，还有<strong>V2RAY</strong>和<strong>trojan</strong>，虽然从用户基数来说还是<strong>VPN</strong>用户占据主流，但是对长期和稳定的KXSW用户来说，<strong>socks5</strong>代理的方式才是目前最好的选择！ 但是这里提下，<strong>VPN</strong>对于<strong>socks5</strong>代理的方式从原理上讲有一定优势，那就是能实现真正意义上的全局代理，甚至一些socks5不转发的流量全部统统走代理，包括ICMP流量，VPN再网络层级中无限接近最底层，你可以理解为VPN建立了一个相当于虚拟网卡，你网络上的所有流量都会被强制接管，甚至再第三方眼中，你的IP都会变成VPN的服务器IP !  从<strong>shadowsocks</strong>到V2ray到Trojan，这都是SOCKS5代理，在网络层级中是在应用层的会话层，所以很多流量都无法代理，这就是为什么你开了<strong>shadowsocks全局</strong>，也不能通过代理打游戏 ! 接下来科普的是网络层级的知识！示例图看下：</p><p><img src="http://image1.bubuko.com/info/202010/20201002230911936890.png" alt="OSI模型"></p><p>原理：这张图是<strong>OSI模型</strong>，解释了数据再各层级中的流动，一个数据在最上方的第七层应用层产生，到最后最底层物理网络接口发到互联网的挣个流程，大概就是这个样子的！ 这里拿在<strong>google搜索</strong>一个关键字这个实际的应用来举例，首先打开浏览器，输入关键字，在最上面的应用层，通过http协议发送到第六层表示层，表示层把收到的数据翻译成机器语言，发送到第五层会话层，会话层的作用是建立维护当前会话，接下来到第四层传输层，传输层的作用在于确定要使用的传输协议，并且添加对应的google服务器的通讯端口，然后到第三层网络层，数据到这里是为了添加<strong>google</strong>的IP地址，到了第二层数据链路层，在这里添加路由MAC地址，通讯对象的<strong>MAC地址</strong>等，最底层的就是物理层，数据以<strong>比特流</strong>的形式，最终通过你的网络硬件传输给google，google返回查询结果之后，发回数据，数据被接收后，是以相反的方向流动，就不啰嗦了！配合这个图，下面的东西就一目了然了:</p><ul><li>网页浏览器，邮件服务器，文件传输这些都跑在应用层最上层</li><li>包括了<strong>shadowsocks V2ray Trojan</strong>等这种<strong>socks5</strong>类型的代理跑在第五层会话层，所以可以代理上面应用层的数据！游戏数据是直接通过传输层的协议<strong>TCP</strong>和<strong>UDP</strong>进行通讯的，所以不经过会话层，也不需要表示层来解释，所以<strong>socks5</strong>代理正常情况是不能加速游戏的！你打开KXSW软件，就算开了全局，也代理不了跑在传输层的游戏通讯数据!</li><li>包括ping trace等这些<strong>ICMP指令</strong>都跑在第三层网络层</li><li><strong>VPN</strong>跑在第二层数据链路层或者第三层网络层，所以<strong>VPN</strong>一大有点就是几乎所有流量都能被代理！<strong>VPN=真全局</strong>，但是<strong>GFW</strong>早都探测到VPN的特征，所以现在极不稳定，靠频繁更换<strong>IP</strong>来抵抗<strong>GFW</strong>!</li></ul><h3 id="Wireguard"><a href="#Wireguard" class="headerlink" title="Wireguard  :"></a>Wireguard  :</h3><p>​      是一个网络信息的安全专家搞出来的，设计原理就是为了加强安全性，对抗美国棱镜门计划，这个相比<strong>VPN</strong>有些特殊，<strong>VPN</strong>大都采用<strong>TCP通讯协议</strong>，而WG采用<strong>UDP通讯协议</strong>！</p><ul><li><strong>TCP:</strong>  主要是需要本地和远程多次握手，建立长链接！并且验证每一次的通信，确保数据按照顺序到达和处理！但<strong>TCP</strong>容易被<strong>GFW</strong>通过发送<strong>Reset包</strong>来阻断!</li><li><strong>UDP:</strong>  不管对面有没有再听，我就发数据包，而且不建立长链接，也没哟牛通过数据戳来验证数据包的完整性和顺序性的机制，你可以理解为：<strong>TCP</strong>是两个正常的人之间的对话，<strong>UDP</strong>是一个瞎子对另一个人乱喊乱叫，数据包也会经常丢，都是乱序到达，<strong>GFW</strong>发送<strong>Reset包</strong>对<strong>UDP</strong>不起作用，所以也就无法封锁WG! 但是<strong>UDP流量</strong>被<strong>QOS</strong>限速是极为普遍的情况，原因就是WG的特征非常明显，所以WG不适合KXSW，也不应该用于KXSW，就算能用，也仅仅是因为小众，<strong>GFW</strong>懒得鸟你，所以不推荐，其他<strong>VPN</strong>也是这样！但是，同时对于不想麻烦的小白，可能<strong>VPN</strong>更加便捷！这也是这么多人用<strong>VPN</strong>的原因吧！</li></ul><h2 id="关于安全"><a href="#关于安全" class="headerlink" title="关于安全:"></a>关于安全:</h2><p>​       没做笔记，用于学习的话没有人管你，查了一下统计中国KXSW用户大概<strong>几百万到2000万之间</strong>，所以也不是一个小数目了！抱着学习的目的，没有人说你，何况很多人还会去查学术资料的！所以，<strong>看自己!</strong> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GFW的工作原理</title>
+      <link href="/posts/2.html"/>
+      <url>/posts/2.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="开篇："><a href="#开篇：" class="headerlink" title="开篇："></a>开篇：</h2><p>​        这篇文章和上一篇讲解历史的是一样的，也是看了一些视频和文档，在自己的onenote上了做了一些笔记，所以就同样的把他传上来，因为当时是边看边记，所以可能一些地方是一笔带过，见谅，因为更深的专业名词我也说不上来，但是对GFW的工作原理的确对我帮助很大，要知其然，更要知其所以然！！！！ <strong>注意： 本文只是探讨GFW的技术原理，技术无罪！ 望知悉！</strong>   </p><h2 id="GFW是什么"><a href="#GFW是什么" class="headerlink" title="GFW是什么"></a>GFW是什么</h2><p>​       中国互联网1987年开始，还是比较早的，  但是<strong>GFW</strong>的诞生晚的多，起步于1998年，全称（<strong>Great Fire Wall</strong>），当时的主要手段是DNS劫持或者IP的封锁，以及包过滤，就是对一些明文协议进行关键字过滤等，GFW几乎可以在以下几个层都可以做文章 ：应用层，传输层，网络层，物理层, 见下图</p><p><img src="http://image1.bubuko.com/info/202010/20201002230911936890.png" alt="OSI模型"></p><h2 id="GFW的工作原理："><a href="#GFW的工作原理：" class="headerlink" title="GFW的工作原理："></a>GFW的工作原理：</h2><ul><li><p><strong>DNS污染:</strong> 解析国外域名，必须要有国外的域名服务器, 由于Dns所有的数据包都是明文和裸奔的，一旦被探测到到搜索非法域名，GFW就会伪造一个错误结果给你！俗话叫DNS污染，可谓四两拨千斤，占用网络资源非常少，但是可以挡住大部分小白！！</p></li><li><p><strong>封锁IP封端口:</strong> 一般国外一些大公司都有很多连续ip段，例如google，或者一些vpn有特定端口，现在GFW主要是用路由扩散技术，把要封锁的IP配置成空路由，这是一个非常高效的方法，也就是说可能你的数据包还没有出省呢，就被引导到黑洞去了！这也充分说明GFW是一个高效的分布式系统! !!</p></li><li><p><strong>关键字阻断配合TCP重置（TCP RST）:</strong> 这种方法主要应用在网上的明文内容：比如：网页浏览的<strong>http协议</strong>，用于收发邮件的<strong>POP3  SMTP</strong>或者文件传输的<strong>FTP</strong>, 这些协议在互联网基本是裸奔的，GFW可以检测里面的关键字，如果不符合预期，就会给连接的双方发一个<strong>TCP RST</strong>的重置命令。理解为告诉打电话的双方，对方挂断了电话，所以两个人通话就结束了！</p></li><li><p><strong>协议识别:</strong> 主要涉及两个方面，1.代理的协议识别：比如，<strong>http代理</strong>，<strong>socks5代理</strong>；各类<strong>VPN协议</strong>：比如：<strong>openvpn</strong>，<strong>pptp</strong>。这类协议特征特别明显，连接之前都是固定套路，所以特别容易识别，所以GFW一旦检测到你的端口运行的是代理服务，就会封掉IP或者端口！  另外，可能一些专门为翻GFW所设立的协议，可能没有明显的流量特征，例如：<strong>ss</strong>，<strong>vmess</strong>，但是某些软件的特定版本是有漏洞的，ss就出现过安全漏洞，这个漏洞的简而言之，就是经过有限次数的尝试，就能知道这个端口跑的是ss服务，<strong>V2ray</strong>也暴露出过漏洞，tls指纹的漏洞！总之，根据已知的漏洞，GFW也会探测到你端口跑的是不是翻GFW服务，如果是，就会封你的ip或者端口。 还有，协议识别还会识别另一方面，就是正常的加密协议，比如，<strong>https</strong>，<strong>ssh</strong>之类的协议，这类协议，GFW确实不能识别里面的内容，但也不是一点办法没有！！！</p></li><li><p><strong>大数据和人工智能：</strong> 首先，<strong>GFW</strong>积累了足够的数据，而且有足够的资源，所以，这方面的研究肯定是在进行，是否到了实用阶段无法断定，几个专利和文章说明不了问题，也不能相信网上的所谓内部消息，作者的观点：只是再有限的范围内做测试，或者是再解决某些特定问题上实用了AI, 但是不会把主要工作交给AI, 因为一旦判断失误，有可能造成灾难性后果，这是对未来一些有限的展望，但人工智能在处理大数据方面无疑是最厉害的！</p></li></ul><h2 id="Dns是什么："><a href="#Dns是什么：" class="headerlink" title="Dns是什么："></a>Dns是什么：</h2><p>​        Dns就是把域名翻译成IP地址 ，简单说就像是114查号台，你要查询某一个酒店的电话，自己不知道，就打114,114查号台查到后，反馈给你，你再打电话就能打通了，这个比喻我觉得挺贴切的！如果中途114搞鬼了，给了你一个假的电话，你当然就迷失方向了，当你出现404页面的时候，也是同理的！！以前我也对Dns一头雾水，看了一些知识后，才了解了，也算小有收货！！特地发到此处，当个云端笔记也好！本文暂定完结！！！</p><p>​      </p><p>​                                        </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/4a17b156.html"/>
+      <url>/posts/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于博客和作者</title>
+      <link href="/posts/647175ea.html"/>
+      <url>/posts/647175ea.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="为什么建博客？"><a href="#为什么建博客？" class="headerlink" title="为什么建博客？"></a>为什么建博客？</h3><p> 纯属脑子一热，想试试而已! 最近有学python，所以对编程有点好奇，这个网站配置还是有点难，搭建倒是挺简单，但后面的配置才是最花时间的,不过拥有一个自己的博客也算是一个新奇的事情了！</p><h3 id="展望博客"><a href="#展望博客" class="headerlink" title="展望博客"></a>展望博客</h3><p>会上传一些自己的3D创作，也可能会把制作过程大致写出来，一方面对自己是个总结，另一方面也算是加深记忆了；另一方面可能会上传一些学习其他包括编程方面的东西的心得和总结！</p><h3 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h3><p>一个普通的3D艺术家，由于在努力做自己的频道，就是关于3D创作方面的，所以这边有个个人网站应该也不错吧！</p><p>PEACE!!!!!!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
