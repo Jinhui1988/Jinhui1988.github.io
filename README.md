@@ -1,14 +1,5 @@
----
-title: 个人搭建Hexo博客步骤总结
-comments: true
-abbrlink: 5dcod367
-tags:  
-cover: https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg
-categories: 技术
-date: 2021-11-29 14:20:53
-toc:
----
 
+ # 个人搭建Hexo博客步骤总结
 
 
 ##  开篇：
