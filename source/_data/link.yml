@@ -1,0 +1,58 @@
+﻿- class_name: 友情鏈接
+  class_desc: s
+  link_list:
+    - name: Jinhui zhang
+      link: https://jinhui1988.github.io/
+      avatar: https://lh3.googleusercontent.com/a-/AOh14GgjMt3ouE-BtLFEOl44DwGiNuMbxHkh89dhC46Neg=s317-p-rw-no
+      descr: My Blog
+      siteshot: https://i.picsum.photos/id/109/4287/2392.jpg?hmac=K5ytllhfakgsUEDFnY5ujHIGJTzELPQgVJjZMpRlfJY   
+
+- class_name: 網站
+  class_desc: 我的網站
+  link_list:
+    - name: Youtube Channel 
+      link: https://www.youtube.com/channel/UC0c2GfHzuBCBY6roOuhU4Ww
+      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+      descr: 我的Youtube频道JHChannel
+      siteshot: https://img0.baidu.com/it/u=2539752645,2636293754&fm=26&fmt=auto          
+    - name: Twitter
+      link: https://twitter.com/zhang_jinhui
+      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+      descr: 我的Twitter账号
+      siteshot: https://img2.baidu.com/it/u=1836308553,432601274&fm=253&fmt=auto&app=120&f=JPEG        
+    - name: Facebook
+      link: https://www.facebook.com/jh.zhang.3760/
+      avatar: https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-facebook-icon-png-images-icons-and-png-backgrounds-1.png
+      descr: 我的Facebook账号
+      siteshot: https://img0.baidu.com/it/u=1849695535,3663163757&fm=26&fmt=auto
+    - name: Bilibili
+      link: https://space.bilibili.com/26582257
+      avatar: https://logodix.com/logo/1224371.png
+      descr: B站账号
+      siteshot: https://techcrunch.com/wp-content/uploads/2020/05/Screen-Shot-2020-05-19-at-11.50.35-AM-e1589860604688.png?w=1390&crop=1
+    - name: Artstation
+      link: https://zhangjinhui.artstation.com/ 
+      avatar: https://www.effects-events.com/wp-content/uploads/2/2019/04/ArtStation-logo-vertical-dark300-1.png
+      descr: 我的Artstation账号
+      siteshot: https://cdnb.artstation.com/p/assets/images/images/039/387/401/large/jinhui-zhang-fengjing001.jpg
+    - name: QQ
+      link: https://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes
+      avatar: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fec13677cebfbe7dab5ae7edbf3e0aee15c0d82dc1b737-ValM5n_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640701350&t=77169d0df6ed560c7749ffc9a43b4bf2
+      descr: 我的QQ账号
+      siteshot: https://img2.baidu.com/it/u=2834025477,3501447978&fm=26&fmt=auto
+    
+      
+
+
+      
+
+
+
+
+
+
+
+
+
+
+   
