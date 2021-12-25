@@ -6,7 +6,7 @@
   <link href="https://jinhui1988.github.io/atom.xml" rel="self"/>
   
   <link href="https://jinhui1988.github.io/"/>
-  <updated>2021-12-24T15:59:13.908Z</updated>
+  <updated>2021-12-24T16:01:45.994Z</updated>
   <id>https://jinhui1988.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://jinhui1988.github.io/posts/4b30j895.html"/>
     <id>https://jinhui1988.github.io/posts/4b30j895.html</id>
     <published>2021-12-24T15:45:38.553Z</published>
-    <updated>2021-12-24T15:59:13.908Z</updated>
+    <updated>2021-12-24T16:01:45.994Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>​       这是自己之前买的路由器，型号是红米AC2100,因为翻墙也有段时间，工作需要，故看了路由器翻墙的知识，就自己买了一个红米2100，这款是网红路由器，很多人用来刷机，故再次把当时刷机的步骤大致记录下，已被以后忘了的时候可以看看！毕竟好记性不如赖笔头，注意，我只记录一些大致步骤吧，不用太详细了！</p><h2 id="刷机前请注意："><a href="#刷机前请注意：" class="headerlink" title="刷机前请注意："></a><strong>刷机前请注意</strong>：</h2><ul><li>关闭电脑上的防火墙以及杀毒软件；</li><li>请全程保持电脑与路由器网线连接，电脑设置为自动获取IP；</li><li>禁止其他不相关的网卡；</li><li>准备一根牙签。</li></ul><h2 id="固件升级降级-一键刷Breed："><a href="#固件升级降级-一键刷Breed：" class="headerlink" title="固件升级降级++一键刷Breed："></a>固件升级降级++一键刷Breed：</h2><h3 id="方式一：（一键在线刷breed，推荐）："><a href="#方式一：（一键在线刷breed，推荐）：" class="headerlink" title="方式一：（一键在线刷breed，推荐）："></a>方式一：（一键在线刷breed，推荐）：</h3><ul><li>确保红米AC2100路由器官方固件版本为2.0.7（2.0.23也可以），并且路由器可正常联网（因为需要在线下载breed），如果不是请先进行升级或降级；</li><li>首先需要降级固件，下载完成后进入后台 192.168.31.1**-&gt;<strong>常用设置</strong>-&gt;<strong>系统状态</strong>-&gt;<strong>手动升级，加载固件，可以保留数据</strong>-&gt;**开始升级（说明：我当时刷的后台进入地址是192.168.23.1，具体看当时的情况的）</li><li>获取stock，登录小米路由器后台，在地址栏会看到stock的值，stock是 ac40dd7b2aeb62b49986568c53c57e7e，如下图：</li></ul><p><img src="https://raw.githubusercontent.com/Jinhui1988/PicGo_Photo/main/img/AC2100%E5%88%B7%E6%9C%BA01.jpg" alt="stock值"></p><ul><li><p>将stock的值替换下面链接中的<stok>，包括单书名号，然后在浏览器中执行替换后的链接：</stok></p><pre class="line-numbers language-none"><code class="language-none">http://192.168.31.1/cgi-bin/luci/;stok=&lt;STOK&gt;/api/misystem/set_config_iotdev?bssid=Xiaomi&amp;user_id=longdike&amp;ssid=%0Acd%20%2Ftmp%0Acurl%20-o%20B%20-O%20https%3A%2F%2Fbreed.hackpascal.net%2Fbreed-mt7621-xiaomi-r3g.bin%20-k%0A%5B%20-z%20%22%24(sha256sum%20B%20%7C%20grep%20242d42eb5f5aaa67ddc9c1baf1acdf58d289e3f792adfdd77b589b9dc71eff85)%22%20%5D%20%7C%7C%20mtd%20-r%20write%20B%20Bootloader%0A<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>如果看到Code0，代表成功！正常：需要等一会，路由器在60秒内重启则代表刷BREED成功(灯会从蓝变橘，最终变<strong>蓝</strong>进入系统)，成功后拔掉电源，按住reset同时接上电源等10秒即可进入breed，Breed地址为192.168.1.1，如果没重启，可能是stok过期了，进入后台复制新的stok即可。也有可能下载的BREED损坏，从新运行代码。也有可能没网络。</p></li></ul><h2 id="刷入固件："><a href="#刷入固件：" class="headerlink" title="刷入固件："></a>刷入固件：</h2><h3 id="Padavan老毛子固件："><a href="#Padavan老毛子固件：" class="headerlink" title="Padavan老毛子固件："></a>Padavan老毛子固件：</h3><p>下载地址：<a href="https://opt.cn2qq.com/padavan/">https://opt.cn2qq.com/padavan/</a> （ RM2100开头的那个，如：RM2100_3.4.3.9-099.trx）</p><h3 id="刷入步骤："><a href="#刷入步骤：" class="headerlink" title="刷入步骤："></a><strong>刷入步骤：</strong></h3><ul><li>进入breed后台 <a href="http://192.168.1.1/">http://192.168.1.1/</a></li><li>点击“固件更新”，在固件处选择Padavan老毛子固件 RM2100_3.4.3.9-099.trx ，点击上传，然后点更新，更新完成后会自动重启,如下图：</li></ul><p><img src="https://raw.githubusercontent.com/Jinhui1988/PicGo_Photo/main/img/AC2100%E5%88%B7%E6%9C%BA02.jpg"></p><p><img src="https://raw.githubusercontent.com/Jinhui1988/PicGo_Photo/main/img/AC2100%E5%88%B7%E6%9C%BA03.jpg"></p><p>等待重启成功后即可进入路由器后台 <a href="http://192.168.123.1/">http://192.168.123.1/</a> 用户名 admin, 密码admin！！</p><h2 id="最终效果："><a href="#最终效果：" class="headerlink" title="最终效果："></a>最终效果：</h2><p><img src="https://raw.githubusercontent.com/Jinhui1988/PicGo_Photo/main/img/AC2100%E5%88%B7%E6%9C%BA04.jpg"></p><p>进入到以上系统，就代表老毛子固件我们已经刷入红米AC2100了，然后就可以在搭建WEB环境里，随意选择一个科学上网工具，然后把自己的代理配置进去，就实现了全家都能科学上网的夙愿了！</p><h2 id="结语："><a href="#结语：" class="headerlink" title="结语："></a>结语：</h2><p>​       以上是给红米AC2100刷机的大致过程，老毛子相比Openwrt要更简单写，Openwrt太麻烦，所以没有尝试，建议新手刚开始刷机就用老毛子，用着还挺好！好了，这次的分享就到这里，谢谢各位!!!</p><p><strong>PEACE !</strong> </p>]]></content>
     
@@ -94,13 +94,13 @@
     
     <category term="老毛子固件" scheme="https://jinhui1988.github.io/tags/%E8%80%81%E6%AF%9B%E5%AD%90%E5%9B%BA%E4%BB%B6/"/>
     
-    <category term="padavan" scheme="https://jinhui1988.github.io/tags/padavan/"/>
-    
     <category term="路由器固件" scheme="https://jinhui1988.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%9B%BA%E4%BB%B6/"/>
     
     <category term="openwrt编译" scheme="https://jinhui1988.github.io/tags/openwrt%E7%BC%96%E8%AF%91/"/>
     
     <category term="固件编译" scheme="https://jinhui1988.github.io/tags/%E5%9B%BA%E4%BB%B6%E7%BC%96%E8%AF%91/"/>
+    
+    <category term="padavan" scheme="https://jinhui1988.github.io/tags/padavan/"/>
     
   </entry>
   
