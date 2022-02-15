@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jinhui1988.github.io/posts/5upa7k41.html</loc>
+    
+    <lastmod>2022-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jinhui1988.github.io/posts/5uhf3k61.html</loc>
     
     <lastmod>2022-02-15</lastmod>
@@ -434,6 +443,15 @@
   </url>
   
   <url>
+    <loc>https://jinhui1988.github.io/List/gallery/myphoto/MOVIE/index.html</loc>
+    
+    <lastmod>2021-09-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jinhui1988.github.io/List/gallery/myphoto/NATURE/index.html</loc>
     
     <lastmod>2021-09-28</lastmod>
@@ -444,15 +462,6 @@
   
   <url>
     <loc>https://jinhui1988.github.io/List/gallery/myphoto/TRAVEL/index.html</loc>
-    
-    <lastmod>2021-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/List/gallery/myphoto/MOVIE/index.html</loc>
     
     <lastmod>2021-09-28</lastmod>
     
@@ -505,6 +514,20 @@
   </url>
   
   <url>
+    <loc>https://jinhui1988.github.io/tags/GFW/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E7%BF%BB%E5%A2%99%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jinhui1988.github.io/tags/GFW%E5%B0%81%E9%94%81/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -533,20 +556,6 @@
   </url>
   
   <url>
-    <loc>https://jinhui1988.github.io/tags/GFW/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/%E7%BF%BB%E5%A2%99%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jinhui1988.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -569,6 +578,27 @@
   
   <url>
     <loc>https://jinhui1988.github.io/tags/VPN/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E5%A4%AA%E9%98%B3%E6%B5%A9%E5%8A%AB/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E7%94%B5%E5%BD%B1/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -690,6 +720,13 @@
   
   <url>
     <loc>https://jinhui1988.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/categories/%E7%94%B5%E5%BD%B1/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
