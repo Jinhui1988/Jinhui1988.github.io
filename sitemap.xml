@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://jinhui1988.github.io/List/gallery/myphoto/MOVIE/index.html</loc>
+    <loc>https://jinhui1988.github.io/List/gallery/myphoto/TRAVEL/index.html</loc>
     
     <lastmod>2021-09-28</lastmod>
     
@@ -452,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://jinhui1988.github.io/List/gallery/myphoto/TRAVEL/index.html</loc>
+    <loc>https://jinhui1988.github.io/List/gallery/myphoto/MOVIE/index.html</loc>
     
     <lastmod>2021-09-28</lastmod>
     
@@ -468,34 +468,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/GFW/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/%E7%BF%BB%E5%A2%99%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://jinhui1988.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
@@ -519,7 +491,14 @@
   </url>
   
   <url>
-    <loc>https://jinhui1988.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://jinhui1988.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -554,6 +533,48 @@
   </url>
   
   <url>
+    <loc>https://jinhui1988.github.io/tags/GFW/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E7%BF%BB%E5%A2%99%E5%8E%86%E5%8F%B2/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/%E7%BA%BF%E8%B7%AF%E7%A7%91%E6%99%AE/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/IPLC/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jinhui1988.github.io/tags/VPN/</loc>
+    <lastmod>2022-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jinhui1988.github.io/tags/%E4%BA%BA%E4%B8%8E%E8%87%AA%E7%84%B6/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -576,27 +597,6 @@
   
   <url>
     <loc>https://jinhui1988.github.io/tags/LIFE/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/%E7%BA%BF%E8%B7%AF%E7%A7%91%E6%99%AE/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/IPLC/</loc>
-    <lastmod>2022-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinhui1988.github.io/tags/VPN/</loc>
     <lastmod>2022-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
